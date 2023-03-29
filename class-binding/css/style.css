@@ -1,0 +1,15 @@
+img {
+    width: 400px;
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+.gray {
+    filter: grayscale(.5);
+}
+
+/* .my-img:hover {
+    transform: scale(1.2);
+} */
