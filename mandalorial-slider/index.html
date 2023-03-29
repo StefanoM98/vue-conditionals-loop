@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="container">
+            <h1 class="title">{{ movie.title }}</h1>
+
+            <div class="slider-container">
+                <!-- Immagine dello slider -->
+                <div class="slider-image">
+                    <img :src="movie.images[activeImage]" :alt="movie.title">
+                </div>
+
+                <!-- Thumbs -->
+                <div class="slider-thumbs">
+                    <div class="thumb" :class="index === activeImage ? 'active' : ''" v-for="(image, index) in movie.images">
+                        <img :src="image" alt="">
+                    </div>
+                </div>
+
+                <!-- Naviazione -->
+                <div class="navigation">
+                    <button class="prev" @click="showPrev">
+                        <span>&larr;</span>
+                    </button>
+                    <button class="next" @click="showNext">
+                        <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

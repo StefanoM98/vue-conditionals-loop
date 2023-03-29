@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.posters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: calc(100% / 4 - 1rem);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}

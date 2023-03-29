@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- // Array di stringhe -->
+      <!-- <ul>
+        <li v-for="(item, index) in names" :id="index">
+          {{ index + 1}} - {{ item }}
+        </li>
+      </ul> -->
+
+      <!--Oggetto -->
+      <!-- <div>
+        <p v-for="(item, key) in student">{{ key }}: {{ item }}</p>
+      </div> -->
+
+      <!-- Numbers -->
+      <!-- <ul>
+        <template v-for="number in 10">
+            <li v-if="number % 2 === 0" >{{ number }}</li>
+        </template>
+      </ul> -->
+
+      <!-- Array di prodotti -->
+      <ul>
+        <li v-for="product in products">
+            <h3>{{ product.name }}</h3>
+            <p>€ {{ product.price }}</p>
+            <p>Peso: {{ product.weight }}</p>
+        </li>
+      </ul>
+      
+      <hr>
+      <h2>Hai selezionato il prodotto:</h2>
+      <p>{{ products[selectedProduct].name }}</p>
+
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
